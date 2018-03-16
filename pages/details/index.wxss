@@ -1,0 +1,18 @@
+/* pages/details/index.wxss */
+.detail-box {
+  font-size: 14px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-img{
+  height: 260rpx;
+  width: 100%;
+}
+
+.detail-recommand{
+  margin-top: 10px;
+  text-align: left;
+  text-indent: 2em;
+}

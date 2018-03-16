@@ -1,0 +1,13 @@
+<!--pages/classify/index.wxml-->
+<view class='typebrandList-box'>
+  <view class='typebrand-slider'>
+    <block wx:for='{{typebrandList}}' wx:for-item='typebrand'>
+      <view class='{{SelectedTypebrand==typebrand.id?"typebrand-desc-slected":""}} typebrand-desc' bindtap='typebrandSelect' id='{{typebrand.id}}'>{{typebrand.tree.desc}}</view>
+    </block>
+  </view>
+
+  <view class='typebrand-brands'>
+    <image wx:for='{{SelectedNodes}}' wx:for-item='selectedNode' src='{{selectedNode.tree.logo}}' class='selectedNode-img'>
+    </image>
+  </view>
+</view>

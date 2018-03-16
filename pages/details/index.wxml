@@ -1,0 +1,12 @@
+<!--pages/details/index.wxml-->
+<view class='detail-box'>
+  <swiper>
+    <block wx:for="{{goodsInfo}}" wx:for-item="goods">
+      <swiper-item>
+        <image  class='detail-img' src='{{goods}}'></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <text class='detail-title'>{{goodsDetail.title}}</text>
+  <text class='detail-recommand'>{{goodsDetail.recommand}}</text>
+</view>

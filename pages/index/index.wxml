@@ -1,0 +1,23 @@
+<!--index.wxml-->
+<swiper indicator-dots='{{indicatorDots}}' autoplay='{{autoPlay}}' interval='{{interval}}' duration='{{duration}}' bindchange='swiperChange' vertical='{{vertical}}' class='sliderList-box'>
+  <block wx:for='{{sliderList}}' wx:for-item="slider">
+    <swiper-item>
+      <image class='sliderImage' src='{{slider.picurl}}' mode='scaleToFill'></image>
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class='venuesList-box'>
+  <image wx:for='{{venuesList}}' src='{{item.smallpic}}' class='venuesList-img'></image>
+</view>
+
+<view class='choiceList-box'>
+  <block wx:for='{{choiceList}}' wx:for-item="choice">
+    <navigator url='../details/index?id={{choice.id}}'>
+      <view class='choice-box'>
+        <image src='{{choice.choicepic}}' mode='scaleToFill' class='choice-img'></image>
+        <text class='choice-title'>{{choice.title}}</text>
+      </view>
+    </navigator>
+  </block>
+</view>
